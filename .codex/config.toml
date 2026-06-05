@@ -1,0 +1,11 @@
+personality = "friendly"
+model = "sonnet[1m]"
+
+[mcp_servers]
+
+[mcp_servers.Neon]
+url = "https://mcp.neon.tech/mcp"
+bearer_token_env_var = "NEON_API_KEY"
+
+[features]
+codex_hooks = true
