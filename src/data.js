@@ -21,6 +21,10 @@
  */
 
 import SEED from './seed.json';
+import { getAdapter, setAdapter, bindSnapshot } from './adapters/index.js';
+
+// Let UI swap the active adapter on login/logout (STEP 3). No-op by default.
+export { setAdapter };
 
 export const STORE_KEY = 'di_prompt_db_v3';
 export const DEFAULT_COLLECTION = 'toy-redesign';
@@ -45,25 +49,20 @@ const FRESH = () => ({
 
 let state = FRESH();
 
+// Expose the live state to whole-blob adapters (the default LocalAdapter
+// persists the entire snapshot on every per-entity write).
+bindSnapshot(() => state);
+
 /* ─────────────────────────── persistence ─────────────────────────── */
 
 export function loadState() {
-  try {
-    const raw = localStorage.getItem(STORE_KEY);
-    if (raw) state = Object.assign(FRESH(), JSON.parse(raw));
-  } catch {
-    /* corrupt or unavailable storage — fall back to a fresh in-memory state */
-  }
+  const loaded = getAdapter().load();
+  if (loaded) state = Object.assign(FRESH(), loaded);
   return state;
 }
 
 export function saveState() {
-  try {
-    localStorage.setItem(STORE_KEY, JSON.stringify(state));
-    return true;
-  } catch {
-    return false; // private mode / quota / file:// restrictions
-  }
+  return getAdapter().save(state);
 }
 
 export function getState() { return state; }
@@ -156,12 +155,12 @@ export function ranked(collectionId = state.activeCollection) {
 
 export function setActiveCollection(id) {
   state.activeCollection = id;
-  saveState();
+  getAdapter().setActiveCollection(id);
 }
 
 export function changeUse(id, delta) {
   state.uses[id] = Math.max(0, useCount(id) + delta);
-  saveState();
+  getAdapter().setUse(id, state.uses[id]);
   return state.uses[id];
 }
 
@@ -181,7 +180,7 @@ export function addPrompt({ title, body, tag, collection, preview }) {
     preview: (preview || '').trim() || describe(body),
   };
   state.custom.push(p);
-  saveState();
+  getAdapter().upsertPrompt(p);
   return p;
 }
 
@@ -191,17 +190,19 @@ export function updatePrompt(id, patch) {
   if (clean.tag) clean.tag = slug(clean.tag);
   const isCustom = state.custom.some((c) => c.id === id);
   if (isCustom) {
-    Object.assign(state.custom.find((c) => c.id === id), clean);
+    const target = state.custom.find((c) => c.id === id);
+    Object.assign(target, clean);
+    getAdapter().upsertPrompt(target);
   } else {
     state.overrides[id] = Object.assign({}, state.overrides[id], clean);
+    getAdapter().upsertOverride(id, state.overrides[id]);
   }
-  saveState();
 }
 
 /** Soft delete (restorable via reset()). */
 export function deletePrompt(id) {
   if (!state.deleted.includes(id)) state.deleted.push(id);
-  saveState();
+  getAdapter().removePrompt(id);
 }
 
 export function addCollection(name) {
@@ -210,7 +211,7 @@ export function addCollection(name) {
     state.collections.push({ id, label: name.trim() });
   }
   state.activeCollection = id;
-  saveState();
+  getAdapter().upsertCollection({ id, label: name.trim() });
   return id;
 }
 
@@ -220,7 +221,7 @@ export function deleteCollection(id) {
   livePrompts(id).forEach((p) => deletePrompt(p.id));
   state.collections = state.collections.filter((c) => c.id !== id);
   if (state.activeCollection === id) state.activeCollection = DEFAULT_COLLECTION;
-  saveState();
+  getAdapter().removeCollection(id);
 }
 
 /** Rename a sub-category everywhere within one collection. */
@@ -237,12 +238,12 @@ export function renameTag(collectionId, oldTag, newName) {
 export function reset() {
   state.uses = {};
   state.deleted = [];
-  saveState();
+  getAdapter().clearCounts();
 }
 
 export function setAiConfig(cfg) {
   state.ai = Object.assign({}, state.ai, cfg);
-  saveState();
+  getAdapter().setAi(cfg);
 }
 
 /* ────────────────────── descriptions (local fallback) ────────────── */
@@ -326,6 +327,6 @@ export function importJSON(input) {
   const obj = typeof input === 'string' ? JSON.parse(input) : input;
   const incoming = obj && obj.state ? obj.state : obj;
   state = Object.assign(FRESH(), incoming);
-  saveState();
+  getAdapter().replaceAll(state);
   return state;
 }
