@@ -1,0 +1,15 @@
+{
+  "name": "prompt-database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal reusable prompt library with categories, usage ranking, and bulk markdown import.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

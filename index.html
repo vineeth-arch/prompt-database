@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Database — Design Innsaeit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <img class="logo" alt="Design Innsaeit" src="./assets/logo.png">
+    <div class="brand-divider"></div>
+    <nav class="cats" id="cats"></nav>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input id="search" type="text" placeholder="Search prompts…" autocomplete="off" spellcheck="false">
+  <div class="filters" id="filters"></div>
+  <button class="add-btn" id="addBtn">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8h10"/></svg>
+    Add prompt
+  </button>
+  <button class="add-btn" id="importBtn" style="background:transparent;color:var(--LG);">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 10V2M5 5l3-3 3 3M3 11v2a1 1 0 001 1h8a1 1 0 001-1v-2"/></svg>
+    Import .md
+  </button>
+  <button class="reset-btn" id="exportBtn" style="border-color:var(--bd2);color:var(--t50);">Export</button>
+  <button class="reset-btn" id="importJsonBtn" style="border-color:var(--bd2);color:var(--t50);">Restore</button>
+  <input id="importJsonFile" type="file" accept=".json" style="display:none;">
+  <button class="reset-btn" id="resetBtn">Reset counts</button>
+</div>
+
+<div class="wrap">
+  <div class="cat-banner">
+    <div class="name" id="catName">Toy Redesign</div>
+    <span class="meta" id="catMeta"></span>
+  </div>
+
+  <section id="topSection">
+    <div class="section-head">
+      <h2>Top <em>Six</em></h2>
+      <span class="label">Most used</span>
+    </div>
+    <div class="grid top" id="topGrid"></div>
+  </section>
+
+  <section id="allSection">
+    <div class="section-head">
+      <h2 id="allHeading">All <em>Prompts</em></h2>
+      <span class="label" id="allLabel">Ranked by use</span>
+    </div>
+    <div class="grid" id="allGrid"></div>
+    <div id="empty">No prompts match that search.</div>
+  </section>
+</div>
+
+<footer class="wrap">
+  <span>Design Innsaeit · Prompt Database · <a href="mailto:vineeth@designinnsaeit.com">vineeth@designinnsaeit.com</a></span>
+  <span id="storeNote"></span>
+</footer>
+
+<!-- PREVIEW MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="card-id" id="mId"></div>
+      <h3 id="mTitle"></h3>
+      <button class="modal-close" id="mClose" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body"><pre id="mBody"></pre></div>
+    <div class="modal-foot">
+      <button class="btn copy" id="mCopy">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M3 11V3a1 1 0 011-1h8"/></svg>
+        Copy prompt
+      </button>
+      <div class="counter">
+        <button class="cbtn minus" id="mDec" aria-label="Decrease">−</button>
+        <span class="cval" id="mUses">0</span>
+        <button class="cbtn plus" id="mInc" aria-label="Increase">+</button>
+      </div>
+      <button class="btn edit" id="mEdit">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 2.5l2.5 2.5L6 12.5 3 13l.5-3z"/></svg>
+        Edit
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- EDITOR MODAL -->
+<div class="modal-overlay editor" id="editor">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="edHead">Add prompt</h3>
+      <button class="modal-close" id="edClose" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <label>Title</label>
+        <input id="edName" type="text" placeholder="Prompt heading" autocomplete="off">
+      </div>
+      <div class="field">
+        <label>Short description</label>
+        <input id="edDesc" type="text" placeholder="One line shown on the card" autocomplete="off">
+      </div>
+      <div class="field">
+        <label>Category</label>
+        <select id="edCollection"></select>
+      </div>
+      <div class="field">
+        <label>Type</label>
+        <div class="cat-row">
+          <select id="edTag"></select>
+          <input id="edNewTag" type="text" placeholder="or type a new type" autocomplete="off">
+        </div>
+      </div>
+      <div class="field">
+        <label>Prompt</label>
+        <textarea id="edBody" placeholder="The full prompt text"></textarea>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn copy" id="edSave">Save</button>
+      <button class="btn ghost" id="edCancel">Cancel</button>
+      <span id="edMsg"></span>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRM / NAME MODAL -->
+<div class="modal-overlay confirm" id="confirm">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="cfHead">Confirm</h3>
+      <button class="modal-close" id="cfClose" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div id="cfMsg"></div>
+      <input id="cfInput" type="text" style="display:none;" autocomplete="off">
+    </div>
+    <div class="modal-foot">
+      <button class="btn copy" id="cfYes">Confirm</button>
+      <button class="btn ghost" id="cfNo">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- IMPORT MODAL -->
+<div class="modal-overlay import" id="importModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Import markdown files</h3>
+      <button class="modal-close" id="imClose" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <label>Add into category</label>
+        <div class="cat-row">
+          <select id="imCollection"></select>
+          <input id="imNewCollection" type="text" placeholder="or type a new category" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="dropzone" id="imDrop">
+        <div><strong>Choose .md files</strong> or drag them here</div>
+        <div style="font-size:.78rem;margin-top:6px;">Multiple files supported. Each heading becomes a prompt.</div>
+        <input id="imFiles" type="file" accept=".md,.markdown,.txt" multiple style="display:none;">
+      </div>
+
+      <details class="ai-box" id="imAiBox">
+        <summary>Use an AI model to categorize and describe (optional)</summary>
+        <div class="ai-grid">
+          <div class="field">
+            <label>Provider</label>
+            <select id="aiProvider">
+              <option value="none">Off — use local rules</option>
+              <option value="openai">OpenAI-compatible (OpenAI / Ollama / LM Studio / OpenRouter)</option>
+              <option value="anthropic">Anthropic</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Model</label>
+            <input id="aiModel" type="text" placeholder="e.g. gpt-4o-mini, llama3.1, claude-3-5-haiku" autocomplete="off">
+          </div>
+          <div class="field full">
+            <label>Endpoint (base URL)</label>
+            <input id="aiBase" type="text" placeholder="e.g. http://localhost:11434/v1  or  https://api.openai.com/v1" autocomplete="off">
+          </div>
+          <div class="field full">
+            <label>API key (stored only on this device; blank for local models)</label>
+            <input id="aiKey" type="password" placeholder="sk-…" autocomplete="off">
+          </div>
+        </div>
+        <p class="hint">Local models (Ollama http://localhost:11434/v1, LM Studio http://localhost:1234/v1) work most reliably. External APIs may be blocked by cross-origin rules; on failure the local rules are used.</p>
+      </details>
+
+      <div id="imStatus" class="import-status" style="display:none;"></div>
+      <div id="imPreview" class="prev-list" style="display:none;"></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn copy" id="imProcess">Process files</button>
+      <button class="btn copy" id="imImport" style="display:none;">Import selected</button>
+      <button class="btn ghost" id="imCancel">Cancel</button>
+      <span id="imMsg" class="import-status"></span>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./src/ui.js"></script>
+</body>
+</html>

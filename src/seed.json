@@ -1,0 +1,317 @@
+[
+  {
+    "id": "p00",
+    "num": "00",
+    "title": "Project Instruction Add-on: Graphic Extraction",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "System-level rules for any session involving graphic extraction, cleanup, canvas expansion, and asset output.",
+    "body": "Graphic extraction and cleanup rule\n\nWhen the user provides an image and asks to extract, clean, enhance, redraw, isolate, or recreate a graphic from it:\n\n1. Identify the exact graphic area the user wants extracted.\n2. Preserve the full graphic element without cropping any important part.\n3. If the original graphic is close to the edge, expand the canvas slightly so the full graphic has breathing space.\n4. The final image should include a solid background color around the border, matching or extending the original background color wherever possible.\n5. Do not let the graphic touch the image edges unless the user specifically asks for edge-to-edge artwork.\n6. Clean and enhance the graphic while preserving its original character, proportions, shape language, and visual intent.\n7. Remove unwanted packaging text, logos, dieline marks, shadows, folds, distortion, glare, blur, compression artifacts, or background clutter unless the user asks to keep them.\n8. If the graphic is part of a packaging design, extract only the requested graphic and do not include the full packaging layout.\n9. When enhancing, improve sharpness, edges, color clarity, contrast, and print-readiness without inventing unrelated new elements.\n10. If the graphic has a solid color background, extend that solid background to the image borders so the final output feels complete and not tightly cropped.\n11. The final result should be clean, centered, usable as an artwork asset, and ready to place back into packaging or design layouts.\n12. If the user asks for only the graphic, do not add mockups, extra text, presentation frames, labels, or explanations."
+  },
+  {
+    "id": "p01",
+    "num": "01",
+    "title": "Packaging Redesign from Vendor Pack + Inspiration",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Full redesign brief: vendor pack in, inspiration as direction, original product photo preserved, fresh shelf-ready output across the full dieline.",
+    "body": "Take on the role of a world-class packaging designer and packaging adaptation specialist.\n\nI am giving you:\n1. Existing vendor packaging\n2. Product photo or product image from the vendor pack\n3. Inspiration reference\n4. Dieline/KLD if available\n\nTask:\nCreate a fresh flatlay packaging design based on the inspiration direction.\n\nImportant rules:\n- Keep the original product photo exactly as the main product visual.\n- Keep the KLD/dieline structure the same.\n- Preserve important product information, warnings, age grade, item number, safety icons, and mandatory content.\n- Remove weak vendor graphics, clutter, unnecessary decorative elements, and poor-quality design elements.\n- Use the inspiration only for mood, style, color direction, energy, typography feel, and composition logic.\n- Do not copy the exact elements, characters, motifs, text, or layout from the inspiration.\n- Create a fresh, original, shelf-ready packaging design.\n- Think across the full dieline: front, back, side panels, top flap, bottom flap, and glue/flap areas.\n- Keep the design production-aware and readable.\n\nDesign direction:\n[Insert desired style here]\n\nBrand:\n[Insert brand name/logo instruction here]\n\nProduct name:\nSuggest a better product name based on the target audience. Do not reuse the vendor product name unless necessary.\n\nTarget audience:\n[Insert age group / parent buyer / retail context]\n\nFinal output:\nCreate a clean flatlay packaging design across the dieline."
+  },
+  {
+    "id": "p02",
+    "num": "02",
+    "title": "Packaging Correction Prompt",
+    "tag": "correction",
+    "collection": "toy-redesign",
+    "preview": "Structured revision brief: call out exactly what is wrong, what to keep, what to change, and the corrected direction.",
+    "body": "Revise the previous packaging design.\n\nCorrection:\n[Write the specific issue clearly]\n\nKeep:\n- Keep the original product photo the same.\n- Keep the KLD/dieline the same.\n- Keep the parts of the design that are working.\n- Keep the intended target audience and product category.\n\nChange:\n- [Specific change 1]\n- [Specific change 2]\n- [Specific change 3]\n\nDo not:\n- Do not copy the inspiration directly.\n- Do not use the same characters, motifs, or exact elements from the inspiration.\n- Do not crop or distort the product photo.\n- Do not change the dieline.\n- Do not overcrowd the background.\n- Do not add unnecessary text or decorative clutter.\n\nUpdated design direction:\n[Describe corrected direction]\n\nFinal output:\nCreate the corrected flatlay packaging design with a clean, shelf-ready, production-aware layout."
+  },
+  {
+    "id": "p03",
+    "num": "03",
+    "title": "Use Only the Theme, Not the Same Elements",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Borrow mood, energy, color, and attitude from a reference — without copying characters, motifs, or layout.",
+    "body": "Use the inspiration reference only as a style and mood direction.\n\nDo not copy:\n- The exact illustration\n- The exact character\n- The exact typography\n- The exact layout\n- The exact words\n- The exact motifs\n- The exact graphic composition\n\nOnly borrow the general design language:\n- Color energy\n- Visual attitude\n- Graphic boldness\n- Mood\n- Contrast\n- Typography style direction\n- Illustration treatment\n- Overall shelf impact\n\nCreate a new, original packaging design for:\n[Product name/category]\n\nKeep:\n- Original product photo\n- Original KLD/dieline\n- Mandatory product information\n- Required age grade and safety content\n\nCreate:\n- A fresh product name suitable for the target audience\n- A new visual system\n- Clean front-panel hierarchy\n- Matching side, back, top, and bottom panel design\n- Original icons and background patterns\n\nFinal output:\nA fresh flatlay packaging design inspired by the reference style, but not visually copied from it."
+  },
+  {
+    "id": "p04",
+    "num": "04",
+    "title": "Add New Logo and Remove Vendor Logo",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Swap the vendor logo for your brand logo on the front panel, tidy the background, keep dieline and product photo intact.",
+    "body": "Update the packaging design using the new brand logo provided.\n\nLogo instructions:\n- Place the provided brand logo on the top left corner of the front panel.\n- Make it clearly visible and properly scaled.\n- Remove the vendor logo from the top right corner.\n- Do not keep the vendor brand as the main front-facing brand.\n- Keep the product photo unchanged.\n- Keep the KLD/dieline unchanged.\n\nDesign update:\n- Keep the overall packaging clean and retail-ready.\n- Make the background pattern neat, clean, and minimalist.\n- Use subtle shapes, small icons, light math symbols, dots, or geometric details only.\n- Avoid loud clutter or heavy decorative patterns.\n- Make sure the product photo remains the hero.\n\nFinal output:\nCreate the updated flatlay packaging design with the new brand logo and without the vendor logo."
+  },
+  {
+    "id": "p05",
+    "num": "05",
+    "title": "Minimalist Background Pattern",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Generate a subtle, kid-friendly, print-safe background pattern — dots, symbols, geometry — that stays behind the hero, never competing with it.",
+    "body": "Create a clean minimalist packaging background pattern.\n\nStyle:\n- Neat\n- Clean\n- Modern\n- Kid-friendly\n- Light and subtle\n- Not cluttered\n- Not too loud\n\nUse:\n- Small dots\n- Plus, minus, divide, multiply symbols\n- Tiny stars or sparks\n- Simple geometric shapes\n- Low-opacity learning/game icons\n- Soft corner shapes\n- Clean white space\n\nAvoid:\n- Heavy textures\n- Large illustrations\n- Busy repeated patterns\n- Too many colors\n- Dark clutter behind text\n- Distracting elements behind the product photo\n\nKeep:\n- Product photo as the hero\n- Clear front-panel hierarchy\n- Readable product name\n- Clean side-panel icons\n- Organized back panel\n\nFinal output:\nA clean, minimalist, production-aware packaging design pattern that supports the product and brand without overpowering them."
+  },
+  {
+    "id": "p06",
+    "num": "06",
+    "title": "Graphic Extraction from Packaging",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "Pull a specific graphic element cleanly — no dieline, no text, no clutter — ready to reuse as a standalone asset.",
+    "body": "Extract the graphic from the image I provided.\n\nImportant:\n- Extract only the requested graphic element.\n- Do not include the full packaging design.\n- Do not include extra text, logos, dieline marks, shadows, folds, glare, or background clutter.\n- Clean and enhance the graphic.\n- Improve sharpness, edges, color clarity, and overall quality.\n- Preserve the original graphic style, proportions, and visual character.\n- Do not invent unrelated new elements.\n\nCropping rule:\n- Do not crop any part of the graphic.\n- Expand the canvas if needed so the full graphic has breathing space.\n- Keep a solid background color around the border of the image.\n- The border/background should match or extend the original background color.\n- The graphic should sit comfortably inside the image and not touch the edges.\n\nFinal output:\nGive me only the cleaned and enhanced graphic asset on a solid background."
+  },
+  {
+    "id": "p08",
+    "num": "08",
+    "title": "Product Photo Extraction",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "Cleanly isolate just the product from its packaging — transparent or neutral background, ready to drop into a new design.",
+    "body": "Extract and clean the product photo from this packaging image.\n\nInstructions:\n- Extract only the product photo.\n- Remove packaging background, text, logos, icons, shadows, folds, and clutter.\n- Preserve the actual product shape, color, proportions, and details.\n- Do not redesign the product.\n- Do not change the product colors.\n- Improve clarity, sharpness, and edge quality.\n- Make the product clean enough to reuse in a new packaging design.\n\nOutput style:\n- Product centered\n- Clean edges\n- Transparent background if possible\n- If transparent background is not possible, use a clean white or neutral background\n\nFinal output:\nGive me only the cleaned product image asset."
+  },
+  {
+    "id": "p09",
+    "num": "09",
+    "title": "Back Panel Cleanup",
+    "tag": "panel",
+    "collection": "toy-redesign",
+    "preview": "Redesign the back panel — preserve all mandatory info, improve spacing, hierarchy, and readability, remove vendor clutter.",
+    "body": "Redesign the back panel of this packaging while preserving the required information.\n\nKeep:\n- Product information\n- Manufacturer details\n- Maintenance method\n- Warning box\n- Age warning\n- Safety and compliance icons\n- Country of origin\n- Item number\n- Batch/date details\n- Barcode if present\n\nImprove:\n- Spacing\n- Readability\n- Section hierarchy\n- Alignment\n- Typography\n- Information grouping\n- Warning visibility\n- Brand consistency\n\nRemove:\n- Clutter\n- Poor spacing\n- Low-quality vendor styling\n- Unnecessary decorative elements\n- Visual noise\n\nStyle:\n[Insert design style here]\n\nFinal output:\nCreate a cleaner, more readable, production-aware back panel design that matches the front packaging design."
+  },
+  {
+    "id": "p10",
+    "num": "10",
+    "title": "Side Panel Design",
+    "tag": "panel",
+    "collection": "toy-redesign",
+    "preview": "Short benefits, simple icons, brand pattern, vertical tagline — visual continuity from the front panel without cluttering narrow space.",
+    "body": "Create side panel designs for this packaging.\n\nUse the side panels for:\n- Short feature benefits\n- Simple icons\n- Product category\n- Brand pattern\n- Vertical tagline\n- Age grade if useful\n- Visual continuity from the front panel\n\nKeep:\n- Clean spacing\n- Strong readability\n- Minimal clutter\n- Consistent colors and typography\n- Production-safe margins\n\nAvoid:\n- Too much text\n- Large distracting graphics\n- Important content too close to folds\n- Random decorative elements\n\nDesign direction:\n[Insert style direction here]\n\nFinal output:\nCreate side panels that feel connected to the front and back panel while remaining clean and readable."
+  },
+  {
+    "id": "p11",
+    "num": "11",
+    "title": "3D Packaging Mockup",
+    "tag": "mockup",
+    "collection": "toy-redesign",
+    "preview": "Map completed flat artwork to a realistic 3D box — correct fold mapping, studio lighting, clean neutral background, presentation-ready.",
+    "body": "Create a realistic 3D packaging mockup from the provided completed flat packaging artwork.\n\nInstructions:\n- Use the artwork exactly as the source.\n- Map the artwork accurately to the box structure.\n- Preserve front, side, top, bottom, and flap placement.\n- Do not redesign the artwork.\n- Do not distort the typography or product photo.\n- Keep folds, edges, shadows, and perspective realistic.\n- Make the mockup look clean, professional, and presentation-ready.\n- Keep the packaging proportions believable.\n\nPresentation style:\n- Clean studio lighting\n- Simple neutral background\n- Realistic shadows\n- Sharp artwork visibility\n- Premium product presentation\n\nFinal output:\nA realistic 3D packaging mockup showing the design clearly and accurately."
+  },
+  {
+    "id": "p12",
+    "num": "12",
+    "title": "Toy Product Naming",
+    "tag": "naming",
+    "collection": "toy-redesign",
+    "preview": "Generate 20 name options, shortlist 5, recommend 1 with rationale — retail-friendly, kid-safe, parent-trusted, original.",
+    "body": "Suggest strong product names for this toy packaging.\n\nProduct:\n[Describe product]\n\nTarget audience:\n[Age group]\n\nBrand:\n[Brand name]\n\nCategory:\n[Educational toy / game / puzzle / activity toy / learning toy]\n\nNaming direction:\n- Fun\n- Retail-friendly\n- Easy to understand\n- Parent-friendly\n- Kid-friendly\n- Shelf-ready\n- Not too generic\n- Not too technical\n- Not copied from the vendor pack\n\nAvoid:\n- Reusing the vendor product name\n- Names that sound too adult\n- Names that sound too cheap\n- Names that are too long\n- Names that are hard to pronounce\n\nGive me:\n1. 20 name options\n2. Best 5 shortlisted names\n3. Your top recommendation\n4. Reasoning for why it fits the product and target audience"
+  },
+  {
+    "id": "p14",
+    "num": "14",
+    "title": "Youreka Educational Toy — Full Packaging",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Complete Youreka-branded flatlay: logo swap, new product name, educational toy style, full dieline treatment.",
+    "body": "Create a flatlay packaging design for a Youreka educational toy.\n\nBrand:\nUse the provided Youreka logo as the main brand logo.\n\nLogo placement:\n- Place the Youreka logo on the top left of the front panel.\n- Remove the vendor logo from the top right corner.\n- Do not use the vendor brand as the main visible brand.\n\nProduct:\n[Describe product]\n\nTarget audience:\nChildren aged [age group], with parents as the primary buyers.\n\nKeep:\n- Original product photo\n- Original KLD/dieline\n- Mandatory product information\n- Safety warning\n- Age grade\n- Item number\n- Compliance icons\n- Manufacturer details\n\nChange:\n- Create a better product name for the target audience.\n- Redesign the packaging in a clean, playful, modern educational toy style.\n- Use a neat and minimalist background pattern.\n- Make the product photo the hero.\n- Use clear feature icons.\n- Make the design feel shelf-ready and commercially strong.\n\nDesign style:\nBright, playful, clean, modern, educational, trustworthy, and fun.\n\nAvoid:\n- Vendor pack styling\n- Overcrowded background\n- Directly copied inspiration elements\n- Distorted product image\n- Changed dieline\n- Unreadable text\n- Excessive decorative graphics\n\nFinal output:\nCreate a complete flatlay packaging design across the full dieline."
+  },
+  {
+    "id": "p15",
+    "num": "15",
+    "title": "AI Image Generation — Full Packaging Design",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "End-to-end AI image generation brief: dieline unchanged, product photo unchanged, fresh design across all panels.",
+    "body": "Create a production-aware flatlay packaging design across the full dieline.\n\nUse the uploaded packaging dieline/KLD as the structure and keep it unchanged.\n\nUse the original product photo from the vendor pack as the main front-panel product visual. Do not redraw, distort, recolor, or replace the product photo.\n\nCreate a fresh packaging design for:\n[Product name/category]\n\nBrand:\n[Brand name/logo instruction]\n\nTarget audience:\n[Target audience]\n\nDesign direction:\n[Insert visual direction]\n\nFront panel:\n- Brand logo on top left\n- Strong product name\n- Short tagline\n- Product photo as hero\n- Age grade\n- 4 clear feature icons\n- Clean background pattern\n\nBack panel:\n- Product information\n- Manufacturer details\n- Maintenance method\n- Warning box\n- Compliance icons\n- Country of origin\n- Clean readable information layout\n\nSide panels:\n- Simple icons\n- Short benefits\n- Brand pattern or tagline\n- Clean visual continuity\n\nTop/bottom flaps:\n- Simple brand message or pattern continuation\n- Keep clean and readable\n\nImportant:\n- Keep the KLD/dieline unchanged.\n- Keep product photo unchanged.\n- Do not copy exact elements from the inspiration.\n- Do not overcrowd the design.\n- Keep the design shelf-ready, kid-friendly, and production-aware.\n\nFinal output:\nA clean, high-quality flatlay packaging design on the dieline."
+  },
+  {
+    "id": "p16",
+    "num": "16",
+    "title": "Quick Correction — Cropped Graphic Fix",
+    "tag": "correction",
+    "collection": "toy-redesign",
+    "preview": "One-shot fix: expand canvas, show full graphic, solid background border, no cropping, no style changes.",
+    "body": "The graphic is getting cropped.\n\nPlease fix it.\n\nInstructions:\n- Do not crop any part of the graphic.\n- Expand the canvas around the graphic.\n- Keep the full graphic visible.\n- Add solid background color around the border.\n- The background color should match the existing background.\n- Keep the graphic centered and clean.\n- Do not add extra elements.\n- Do not change the graphic style.\n- Do not include anything except the cleaned graphic asset.\n\nFinal output:\nA complete uncropped graphic with solid background visible on all borders."
+  },
+  {
+    "id": "p17",
+    "num": "17",
+    "title": "Extract Right-Side Packaging Graphic",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "Pull only the right-side graphic — no text, no logos, no dieline. Clean, enhance, expand canvas, solid background.",
+    "body": "Extract only the graphic on the right side of the packaging image.\n\nInstructions:\n- Use only the right-side graphic area.\n- Do not include the full packaging design.\n- Do not include product text, logos, dieline lines, warning icons, or unrelated packaging elements.\n- Clean and enhance the graphic.\n- Preserve the original shape language, colors, and character of the graphic.\n- Remove blur, glare, folds, compression artifacts, and noise.\n- Make the graphic sharper and clearer.\n\nCropping and background:\n- Do not crop any part of the graphic.\n- Expand the canvas if needed.\n- Keep a solid background color around the border.\n- The background color should match the original background.\n- The final image should feel like a complete reusable graphic asset.\n\nFinal output:\nOnly the cleaned, enhanced, uncropped right-side graphic on a solid background."
+  },
+  {
+    "id": "p18",
+    "num": "18",
+    "title": "Master Reusable Packaging Workflow Prompt",
+    "tag": "master",
+    "collection": "toy-redesign",
+    "preview": "The universal wrapper for any packaging task — role, inputs, task, rules, mode identification, and execution plan in one structure.",
+    "body": "Take on the role of a world-class packaging designer, packaging adaptation specialist, dieline-aware artwork planner, and packaging mockup director.\n\nI am giving you:\n[Describe inputs]\n\nTask:\n[Describe what I want]\n\nFirst identify:\n1. Task mode\n2. Inputs received\n3. What should be preserved\n4. What should be removed\n5. Design direction\n6. Panel logic\n7. Final execution plan\n8. Assumptions\n\nPackaging rules:\n- Preserve the original product photo unless I say otherwise.\n- Preserve the KLD/dieline unless I say otherwise.\n- Preserve mandatory information and compliance content.\n- Remove unnecessary vendor graphics and clutter.\n- Use inspiration only as a directional reference, not something to copy.\n- Create original, shelf-ready, production-aware packaging.\n- Think across the full dieline, not only the front panel.\n- Keep hierarchy, readability, and print logic strong.\n\nMy specific instruction:\n[Insert exact instruction here]\n\nFinal output:\nGive me a clear, practical packaging design direction or create the requested packaging output."
+  },
+  {
+    "id": "p15b",
+    "num": "15",
+    "title": "Battery / Technical Information Box",
+    "tag": "compliance",
+    "collection": "toy-redesign",
+    "preview": "Build a compact black-and-white technical info box — battery or spec content, clean border, legible, no decoration, packaging-ready.",
+    "body": "Create a small rectangular technical information box for packaging artwork.\n\nStyle:\n- Basic black and white\n- Clean border\n- Simple readable text\n- No decoration\n- No color\n- No icons unless necessary\n\nContent:\n[Insert battery or technical content]\n\nInstructions:\n- Keep it compact.\n- Keep it legible.\n- Use clear line breaks.\n- Do not include model names if instructed not to.\n- Make it suitable for packaging or instruction artwork.\n\nFinal output:\nA clean black and white rectangular information box."
+  },
+  {
+    "id": "p16b",
+    "num": "16",
+    "title": "Packaging Copy, Panel by Panel",
+    "tag": "copy",
+    "collection": "toy-redesign",
+    "preview": "The expanded copy brief: name options, tagline options, descriptor, icon labels, side/flap/back lines, parent-facing benefits, instruction wording.",
+    "body": "Create packaging-ready copy for this product.\n\nProduct:\n[Insert product]\n\nBrand:\n[Insert brand]\n\nTarget audience:\n[Insert target audience]\n\nBenefits:\n[Insert benefits]\n\nRequired output:\n1. Front panel product name options\n2. Front panel tagline options\n3. Short product descriptor\n4. 4 feature icon labels\n5. Side panel short benefits\n6. Top flap line\n7. Bottom flap line\n8. Back panel short product description\n9. Parent-facing benefit copy\n10. Warning or instruction-friendly wording if needed\n\nTone:\n- Fun\n- Clear\n- Kid-friendly\n- Parent-trustworthy\n- Retail-ready\n- Simple\n- Confident\n\nAvoid:\n- Overclaiming\n- Too much text\n- Generic phrases\n- Technical language that children will not understand"
+  },
+  {
+    "id": "p19",
+    "num": "19",
+    "title": "3D Mockup Correction",
+    "tag": "mockup",
+    "collection": "toy-redesign",
+    "preview": "Fix a flawed mockup — correct panel mapping, perspective, and proportions while leaving the artwork itself untouched.",
+    "body": "Correct the previous 3D packaging mockup.\n\nIssue:\n[Describe the mockup issue]\n\nFix:\n- Preserve the original artwork.\n- Correct the panel mapping.\n- Keep folds and edges realistic.\n- Keep typography readable and not warped.\n- Keep product photo accurate.\n- Correct perspective and proportions.\n- Remove any extra design elements that were not in the artwork.\n- Keep presentation clean and professional.\n\nDo not:\n- Redesign the packaging.\n- Change colors.\n- Change logos.\n- Change text.\n- Distort the artwork.\n\nFinal output:\nA corrected realistic 3D mockup with accurate artwork placement."
+  },
+  {
+    "id": "p20",
+    "num": "20",
+    "title": "Packaging Presentation Direction",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Plan a client-ready deck for the design — hero mockup, flat dieline, panel close-ups, rationale, shelf-impact, before/after.",
+    "body": "Create a professional presentation direction for this packaging design.\n\nInclude:\n1. Hero mockup view\n2. Flat dieline view\n3. Front panel close-up\n4. Back panel close-up\n5. Side panel detail\n6. Key design rationale\n7. Brand and shelf impact explanation\n8. Before/after comparison if vendor pack is available\n\nPresentation style:\n- Clean\n- Premium\n- Client-ready\n- Not cluttered\n- Strong visual hierarchy\n\nCopy tone:\n- Strategic\n- Clear\n- Design-aware\n- Not overly technical\n\nFinal output:\nA client-ready packaging presentation plan with slide-by-slide or section-by-section structure."
+  },
+  {
+    "id": "p21",
+    "num": "21",
+    "title": "Packaging Design Review",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Senior-designer critique: hierarchy, visibility, audience fit, shelf impact, dieline logic, production risk, structured what-works / what-to-fix.",
+    "body": "Review this packaging design like a senior packaging designer.\n\nAssess:\n1. Front panel hierarchy\n2. Product visibility\n3. Brand visibility\n4. Target audience fit\n5. Shelf impact\n6. Dieline logic\n7. Side panel usage\n8. Back panel readability\n9. Color and typography\n10. Icon clarity\n11. Production risks\n12. What should be improved\n\nGive feedback in this structure:\n1. What is working\n2. What is weak\n3. Priority fixes\n4. Panel-by-panel improvements\n5. Final recommendation\n\nBe direct, practical, and production-aware."
+  },
+  {
+    "id": "p22",
+    "num": "22",
+    "title": "Packaging Prepress Checklist",
+    "tag": "compliance",
+    "collection": "toy-redesign",
+    "preview": "17-point production-readiness pass — bleed, margins, fold conflicts, barcode, warning legibility, resolution, rich-black risk, final rating.",
+    "body": "Review this packaging artwork for prepress and production readiness.\n\nCheck:\n1. Dieline alignment\n2. Bleed\n3. Safe margins\n4. Fold line conflicts\n5. Text too close to cut edges\n6. Barcode placement\n7. Warning readability\n8. Legal information visibility\n9. Color consistency\n10. Image resolution\n11. Logo clarity\n12. Font consistency\n13. Icon consistency\n14. Panel orientation\n15. Glue flap safety\n16. Overprint or rich black risks\n17. Print readability at final size\n\nOutput:\n- Critical issues\n- Recommended fixes\n- Nice-to-have improvements\n- Final production readiness rating"
+  },
+  {
+    "id": "p23",
+    "num": "23",
+    "title": "Packaging Copy Humanizer",
+    "tag": "copy",
+    "collection": "toy-redesign",
+    "preview": "Rewrite stiff or AI-sounding pack copy into warm, retail-ready lines — with polished, shorter, playful, and premium variants plus a pick.",
+    "body": "Rewrite this packaging copy to sound more natural, clear, and retail-ready.\n\nGoal:\n- Keep the meaning.\n- Make it warmer and more appealing.\n- Make it suitable for packaging.\n- Remove generic or AI-sounding language.\n- Keep it short and clear.\n- Make it parent-friendly and kid-friendly if it is a toy product.\n\nInput copy:\n[Paste copy]\n\nOutput:\n1. Polished packaging copy\n2. Shorter version\n3. More playful version\n4. More premium version\n5. Recommendation on which version to use"
+  },
+  {
+    "id": "p06b",
+    "num": "06",
+    "title": "Neon Graphic Toy Packaging",
+    "tag": "workflow",
+    "collection": "toy-redesign",
+    "preview": "Bold neon-graphic toy design: electric accents, motion lines, learning motifs, strong shelf impact — original, not copied from the reference.",
+    "body": "Create a neon graphic illustration-style toy packaging design.\n\nUse:\n- Electric color accents\n- Deep navy, cyan, magenta, lime, yellow, or red accents as appropriate\n- Bold graphic shapes\n- Clean motion lines\n- Learning/game-inspired icons\n- Abstract numbers, math signs, sparks, targets, stars, speed marks, or puzzle motifs\n- Strong shelf impact\n\nKeep:\n- Original product photo as the hero\n- Original KLD/dieline unchanged\n- Mandatory information\n- Clear product name and age grade\n\nAvoid:\n- Copying the exact inspiration artwork\n- Copying characters or mascots from the reference\n- Overcrowding\n- Nightclub-style chaos\n- Busy backgrounds behind text\n- Reducing product visibility\n\nProduct:\n[Insert product]\n\nBrand:\n[Insert brand]\n\nTarget audience:\n[Insert age group]\n\nFinal output:\nA fresh neon-inspired toy packaging flatlay that feels original, readable, and shelf-ready."
+  },
+  {
+    "id": "p08b",
+    "num": "08",
+    "title": "Background Asset Generation (No Product, No KLD)",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "Lift just the background layer from a design: drop the product, dieline, text, and icons; keep the mood, color, and pattern as a reusable artwork layer.",
+    "body": "Create only the packaging background artwork asset.\n\nTask:\nI liked the previous packaging design direction, but I want only the background design.\n\nRemove:\n- Product photo\n- KLD/dieline lines\n- Text\n- Logos\n- Feature icons\n- Back panel information\n- Warning labels\n- Product name\n\nKeep:\n- Overall design mood\n- Color system\n- Pattern style\n- Background shapes\n- Decorative rhythm\n- Brand-appropriate energy\n\nImportant:\n- The output should be usable as a clean background artwork layer.\n- Do not include any packaging structure lines.\n- Do not include any text.\n- Do not crop important background elements.\n- Extend the background to the full canvas.\n\nStyle:\n[Insert style]\n\nFinal output:\nOnly the clean background artwork, ready to reuse in packaging."
+  },
+  {
+    "id": "p12b",
+    "num": "12",
+    "title": "Front Panel Icon Replacement",
+    "tag": "icons",
+    "collection": "toy-redesign",
+    "preview": "Swap the front-panel feature icons and labels for a new set of four, consistent in style, placed cleanly so the product photo stays the hero.",
+    "body": "Update the front panel feature icons and labels.\n\nReplace the current icons and text with these features:\n1. [Feature 1]\n2. [Feature 2]\n3. [Feature 3]\n4. [Feature 4]\n\nInstructions:\n- Create matching simple icons for each feature.\n- Keep icon style consistent.\n- Keep the icon row clean and readable.\n- Place icons in a clear front-panel area, preferably near the bottom or side where they support the product photo.\n- Do not overcrowd the front panel.\n- Keep product photo as the hero.\n- Keep brand logo and product name clear.\n\nDo not:\n- Change the product photo.\n- Change the KLD/dieline.\n- Add too many extra icons.\n- Use mismatched icon styles.\n\nFinal output:\nUpdated front panel with the new 4 feature icons and corresponding labels."
+  },
+  {
+    "id": "p13b",
+    "num": "13",
+    "title": "Math Toy Feature Icon Set",
+    "tag": "icons",
+    "collection": "toy-redesign",
+    "preview": "Design four consistent, kid-friendly feature icons for a mental-math toy (calculation modes, game modes, stages, timer), readable at small print size.",
+    "body": "Create 4 clean feature icons for a children’s mental math toy.\n\nFeatures:\n1. 4 Calculation Modes\n2. 3 Game Modes\n3. 3 Mental Math Stages\n4. Timer Mode\n\nIcon style:\n- Simple\n- Kid-friendly\n- Retail packaging ready\n- Consistent stroke weight\n- Easy to understand at small size\n- Works in one or two brand colors\n- Not overly detailed\n\nPlacement:\n- Use on the front panel near the bottom or side.\n- Keep enough spacing around each icon.\n- Add short readable labels below or beside the icons.\n\nAvoid:\n- Complex illustrations\n- Tiny unreadable details\n- Random decorative icons\n- Overly corporate icon style\n\nFinal output:\nA clean 4-icon feature system for packaging."
+  },
+  {
+    "id": "p24",
+    "num": "24",
+    "title": "Compliance Preservation Prompt",
+    "tag": "compliance",
+    "collection": "toy-redesign",
+    "preview": "Redesign freely but lock every mandatory element — warnings, age grade, hazard notices, certification icons, manufacturer details.",
+    "body": "Redesign the packaging but preserve all mandatory and compliance-related content.\n\nMust preserve:\n- Warning statements\n- Age grade\n- Choking hazard notice\n- CE/UKCA/recycling/safety icons if present\n- Manufacturer details\n- Importer/representative details\n- Product item number\n- Batch/date information\n- Country of origin\n- Barcode if present\n- Maintenance or safety instructions\n\nDesign improvement allowed:\n- Improve layout\n- Improve spacing\n- Improve section headers\n- Improve typography\n- Improve readability\n- Improve visual grouping\n\nDo not:\n- Delete mandatory information\n- Rewrite legal warnings unless specifically asked\n- Hide compliance icons\n- Make warning text too small\n- Place mandatory content across fold or cut lines\n\nFinal output:\nA redesigned packaging layout that keeps all required information intact."
+  },
+  {
+    "id": "p25",
+    "num": "25",
+    "title": "Panel Logic Planner",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Plan the full dieline panel-by-panel before any artwork — content, visual priority, copy length, icons, and production cautions per panel.",
+    "body": "Plan the packaging layout panel by panel before design execution.\n\nProduct:\n[Insert product]\n\nBrand:\n[Insert brand]\n\nDieline structure:\n[Describe panels or upload image]\n\nTarget audience:\n[Insert audience]\n\nCreate a panel logic plan for:\n1. Front panel\n2. Back panel\n3. Left side panel\n4. Right side panel\n5. Top flap\n6. Bottom flap\n7. Glue flap or hidden panels if relevant\n\nFor each panel, define:\n- Main content\n- Visual priority\n- Copy length\n- Icon use\n- Background treatment\n- Production cautions\n- What to avoid\n\nFinal output:\nA clear dieline-aware layout plan ready for design execution."
+  },
+  {
+    "id": "p26",
+    "num": "26",
+    "title": "Before & After Vendor Pack Strategy",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Audit an existing vendor pack, then propose a full redesign strategy — name, direction, panel structure, palette, and production cautions.",
+    "body": "Analyze the vendor pack and create a redesign strategy.\n\nAssess the existing pack:\n1. What is worth preserving\n2. What should be removed\n3. What looks weak or generic\n4. What mandatory content must remain\n5. What product truth must be protected\n6. What target audience the current pack seems to address\n7. What shelf opportunity exists\n\nThen propose:\n1. New product name\n2. New design direction\n3. Front panel hierarchy\n4. Back panel organization\n5. Side panel usage\n6. Color and typography direction\n7. Icon and feature system\n8. Production cautions\n\nFinal output:\nA clear redesign strategy before generating artwork."
+  },
+  {
+    "id": "p27",
+    "num": "27",
+    "title": "Inspiration Deconstruction Prompt",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Break down a reference into its design logic — palette, type energy, composition, mood — then translate it into a fresh direction without copying.",
+    "body": "Analyze this inspiration reference for packaging adaptation.\n\nDo not copy it. Instead, identify:\n1. Color palette logic\n2. Typography energy\n3. Composition style\n4. Illustration or graphic language\n5. Mood\n6. Visual hierarchy\n7. Shelf-impact techniques\n8. Pattern or texture use\n9. What makes it appealing\n10. What should not be copied\n\nThen translate it into a fresh packaging direction for:\n[Insert product]\n\nFinal output:\nA usable design direction that captures the inspiration spirit without copying exact elements."
+  },
+  {
+    "id": "p28",
+    "num": "28",
+    "title": "Artwork Background Cleanup Prompt",
+    "tag": "graphic",
+    "collection": "toy-redesign",
+    "preview": "Strip a packaging artwork down to its background — remove text, product, logos, or dieline as requested, keep a continuous reusable asset.",
+    "body": "Clean this packaging/background artwork.\n\nInstructions:\n- Remove unwanted text.\n- Remove product photo if requested.\n- Remove logos if requested.\n- Remove KLD/dieline lines if requested.\n- Remove panel information if requested.\n- Keep only the desired background design.\n- Clean edges and improve image quality.\n- Keep the background continuous.\n- Do not crop the artwork.\n- Extend background color or pattern to the image borders.\n- Keep the output usable as a reusable design asset.\n\nSpecific removal:\n[Insert what to remove]\n\nSpecific keep:\n[Insert what to keep]\n\nFinal output:\nA clean reusable packaging background asset."
+  },
+  {
+    "id": "p29",
+    "num": "29",
+    "title": "Packaging Variant Generation Prompt",
+    "tag": "strategy",
+    "collection": "toy-redesign",
+    "preview": "Three deliberately different routes for one product — clean/minimal, bold/shelf-impact, playful/illustrative — each with execution notes and risks.",
+    "body": "Create 3 packaging design directions for the same product.\n\nProduct:\n[Insert product]\n\nBrand:\n[Insert brand]\n\nTarget audience:\n[Insert audience]\n\nKeep:\n- Product photo\n- Dieline/KLD\n- Mandatory content\n\nFor each direction, provide:\n1. Concept name\n2. Visual style\n3. Color palette\n4. Typography direction\n5. Front panel hierarchy\n6. Side panel treatment\n7. Back panel treatment\n8. Icon style\n9. Why it fits the product\n10. Risk or caution\n\nDirections should be meaningfully different:\n- One clean/minimal\n- One bold/shelf-impact\n- One playful/illustrative\n\nFinal output:\nThree distinct packaging design routes with practical execution notes."
+  },
+  {
+    "id": "p30",
+    "num": "30",
+    "title": "Final AI Generation Master Prompt",
+    "tag": "master",
+    "collection": "toy-redesign",
+    "preview": "The closing brief once a direction is approved — locks preserved content, lists removals, fills each panel, and ships the final flatlay.",
+    "body": "Create the final packaging design based on the following approved direction.\n\nApproved design direction:\n[Insert approved direction]\n\nBrand:\n[Insert brand]\n\nProduct:\n[Insert product]\n\nTarget audience:\n[Insert age group / buyer]\n\nPreserve:\n- Original product photo\n- Original KLD/dieline\n- Mandatory information\n- Age grade\n- Item number\n- Warning labels\n- Compliance icons\n- Manufacturer details\n\nRemove:\n- Vendor decorative graphics\n- Vendor logo if replaced by new brand\n- Clutter\n- Unnecessary front-panel text\n- Poor-quality visual elements\n\nFront panel:\n[Insert front panel instructions]\n\nBack panel:\n[Insert back panel instructions]\n\nSide panels:\n[Insert side panel instructions]\n\nTop/bottom flaps:\n[Insert flap instructions]\n\nStyle:\n[Insert style]\n\nDo not:\n- Copy the inspiration exactly\n- Crop the product photo\n- Distort the KLD\n- Overcrowd the design\n- Make text unreadable\n- Add unrelated graphics\n\nFinal output:\nA polished, shelf-ready, flatlay packaging design across the full dieline."
+  }
+]

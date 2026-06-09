@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env.local
+.env*.local
+.DS_Store
+00000/
+*.zip
+packaging-prompt-library.html
