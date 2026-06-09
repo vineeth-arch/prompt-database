@@ -1,0 +1,66 @@
+Migration inventory:
+  inactive: instruction files - none found
+  active: skills - 26 found
+    - agents-sdk
+    - brandkit
+    - cloudflare
+    - cloudflare-email-service
+    - design-taste-frontend
+    - durable-objects
+    - email-design
+    - emil-design-eng
+    - frontend-design
+    - full-output-enforcement
+    - gpt-taste
+    - high-end-visual-design
+    - humanizer
+    - image-to-code
+    - imagegen-frontend-mobile
+    - imagegen-frontend-web
+    - impeccable
+    - industrial-brutalist-ui
+    - minimalist-ui
+    - neon-postgres
+    - redesign-existing-projects
+    - sandbox-sdk
+    - stitch-design-taste
+    - web-perf
+    - workers-best-practices
+    - wrangler
+  inactive: command sources - none found
+  inactive: subagents - none found
+Migration surfaces:
+  inactive: AGENTS.md - No supported instruction file found.
+  active: skills - 26 skill(s) converted.
+  active: MCP config - 1 MCP server(s) converted into config.toml.
+  inactive: subagents - No subagents found.
+Migration report:
+  manual_fix_required: .claude/plugins - Manual review required for Claude Code plugins; not converted by this tool.
+  rewritten: .codex/hooks.json - Rewritten for Codex hooks; review behavior before relying on it. Codex hooks require `[features].codex_hooks = true`, only execute `command` handlers, skip `async` / `prompt` / `agent` handlers, ignore `matcher` for `UserPromptSubmit` and `Stop`, and `PreToolUse` / `PostToolUse` currently run for shell commands only.
+  rewritten: .agents/skills/agents-sdk/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/brandkit/SKILL.md - Converted Claude skill.
+  manual_fix_required: .agents/skills/cloudflare/SKILL.md - Manual review required for Claude skill fields: `references`.
+  rewritten: .agents/skills/cloudflare-email-service/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/design-taste-frontend/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/durable-objects/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/email-design/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/emil-design-eng/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/frontend-design/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/full-output-enforcement/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/gpt-taste/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/high-end-visual-design/SKILL.md - Converted Claude skill.
+  manual_fix_required: .agents/skills/humanizer/SKILL.md - Manual review required for Claude skill fields: `allowed-tools`, `compatibility`, `comprehensive "Signs of AI writing" guide. Detects and fixes patterns including`, `license`, `version`.
+  rewritten: .agents/skills/image-to-code/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/imagegen-frontend-mobile/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/imagegen-frontend-web/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/impeccable/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/industrial-brutalist-ui/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/minimalist-ui/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/neon-postgres/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/redesign-existing-projects/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/sandbox-sdk/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/stitch-design-taste/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/web-perf/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/workers-best-practices/SKILL.md - Converted Claude skill.
+  rewritten: .agents/skills/wrangler/SKILL.md - Converted Claude skill.
+  rewritten: .codex/config.toml - Converted 1 MCP server entries.
